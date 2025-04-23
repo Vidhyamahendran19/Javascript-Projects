@@ -25,22 +25,59 @@ function change(){
 
 }
 
-    -learning event and event handleer-->
-
-
-    <input  id="num1">
-    <input  id="num2">
-<button onclick="total()">Add</button>
+    -learning event and event handleer
+    
+    
+    <input  id="num1" >
+    <input  id="num2" >
+<button type="submit"  onclick="resultfunction()">Add</button>
 <p id="result">Result</p> 
 <script>
-    var n1=document.getElementById("num1")
-    var n2=document.getElementById("num2")
+    var box1=document.getElementById("num1")
+    var box2=document.getElementById("num2")
     var result=document.getElementById("result")
 
-    function total(){
-    var sum=(n1+n2)
-    console.log(sum.numberContet)
+    
+
+    function resultfunction()
+    {
+    var value1= Number(box1.value)
+    var value2= Number(box2.value)
+
+    var total= value1+value2
+        result.textContent=total
     }
+
+</script>-->
+<h1>Guess the Number 0 to 10</h1>
+<input id="guessnumber">
+<button onclick="check()">check</button>
+<p id="result"> You are wrong /Right</p>
+<p id="score">Score:10</p>
+
+<script>
+var guessnumber= document.getElementById("guessnumber")
+var result= document.getElementById("result")
+var randomNumber= Math.floor(Math.random()*10)
+var score=document.getElementById("score")
+
+var totalscore=10
+
+function check()
+{
+    var enterednumber= guessnumber.value
+if(randomNumber==enterednumber){
+    console.log("Your Correct")
+    result.textContent="Right"
+    alert("You WON")
+}
+else{
+totalscore=totalscore-1
+score.textContent="score"+totalscore
+    console.log("Your wrong")
+}
+}
+
 </script>
 
 
