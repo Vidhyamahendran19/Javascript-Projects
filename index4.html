@@ -6,13 +6,27 @@
     <title>Document</title>
 </head>
 <body>
-    <button onclick="update()">Add Hello</button>
+    <!--button onclick="update()">Add Hello</button>
     <h1 id="result"></h1>
     <script>
         var h1=document.getElementById("result")
         function update()
         {
             h1.append("Hello")
+        }
+    </script>-->
+
+
+    <button onclick="show()"> Add</button>
+    <div id="result"></div>
+    <script>
+        var div=document.getElementById("result")
+
+
+        function show(){
+            var listitem=document.createElement("h1")
+            listitem.textContent="Hello"
+            div.append(listitem)
         }
     </script>
 </body>
